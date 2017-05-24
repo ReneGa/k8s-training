@@ -15,3 +15,11 @@ spec:
               imagePullPolicy: Never
               ports:
               - containerPort: 30080
+              volumeMounts:
+              - name: htpasswd-secret
+                mountPath: "/secret"
+                readOnly: true
+            volumes:
+            - name: htpasswd-secret
+              secret:
+                secretName: web-server-htpasswd
