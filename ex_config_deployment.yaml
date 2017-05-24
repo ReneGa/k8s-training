@@ -23,7 +23,7 @@ spec:
             volumes:
             - name: htpasswd-secret
               secret:
-                secretName: web-server-htpasswd
+                  secretName: web-server-htpasswd
             - name: config-volume
               configMap:
-                name: nginx-auth-config
+                  name: nginx-auth-config
