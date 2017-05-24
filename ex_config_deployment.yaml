@@ -27,7 +27,3 @@ spec:
       - name: config-volume
         configMap:
           name: nginx-auth-config
-          items:
-          - key: nginx.conf
-            path: /
-
