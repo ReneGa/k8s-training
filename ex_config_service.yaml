@@ -3,10 +3,10 @@ kind: Service
 metadata:
     name: web-server
 spec:
-    type: NodePort
+    type: <SERVICE TYPE>
     selector:
         app: web
     ports:
     - protocol: TCP
       port: 80
-      nodePort: 30080
+      nodePort: <NODE PORT>
