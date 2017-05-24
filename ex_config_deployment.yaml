@@ -1,29 +1,30 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-    name: web-server
+  name: web-server
 spec:
-    replicas: 5
-    template:
-        metadata:
-            labels:
-                app: web
-        spec:
-            containers:
-            - name: nginx
-              image: my-web-server
-              imagePullPolicy: Never
-              ports:
-              - containerPort: 30080
-              volumeMounts:
-              - name: htpasswd-secret
-                mountPath: /secret/
-              - name: config-volume
-                mountPath: /etc/nginx/
-            volumes:
-            - name: htpasswd-secret
-              secret:
-                  secretName: web-server-htpasswd
-            - name: config-volume
-              configMap:
-                  name: nginx-auth-config
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: nginx
+        image: my-web-server
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 30080
+        volumeMounts:
+        - name: htpasswd-secret
+        mountPath: /secret/
+        - name: config-volume
+        mountPath: /etc/nginx/
+      volumes:
+      - name: htpasswd-secret
+        secret:
+          secretName: web-server-htpasswd
+      - name: config-volume
+        configMap:
+          name: nginx-auth-config
+
