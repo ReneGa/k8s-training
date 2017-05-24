@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-    name: <DEPLOYMENT NAME>
+    name: web-server
 spec:
-    replicas: <REPLICA COUNT>
+    replicas: 5
     template:
         metadata:
             labels:
-                <LABEL>
+                app: web
         spec:
             containers:
-            - name: <CONTAINER NAME>
-              image: <IMAGE NAME>
+            - name: nginx
+              image: my-web-server
               imagePullPolicy: Never
               ports:
-              - containerPort: <PORT>
+              - containerPort: 30080
