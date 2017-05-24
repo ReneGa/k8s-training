@@ -6,5 +6,5 @@ data:
   nginx.conf: |
     location / {
       auth_basic           off;
-      auth_basic_user_file conf/htpasswd;
+      auth_basic_user_file /secret/htpasswd;
     }
