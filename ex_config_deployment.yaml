@@ -16,9 +16,9 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - name: htpasswd-secret
-          mountPath: /secret/
+        - name: <VOLUME NAME>
+          mountPath: <MOUNT PATH>
       volumes:
-      - name: htpasswd-secret
+      - name: <VOLUME NAME>
         secret:
-          secretName: web-server-htpasswd
+          secretName: <SECRET NAME>
