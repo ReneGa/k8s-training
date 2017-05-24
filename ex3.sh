@@ -1,4 +1,6 @@
 #!/bin/sh
 rm *.yaml
 launch.sh
-touch Dockerfile deployment.yml index.html service.yml
+curl -Lo Dockerfile https://raw.githubusercontent.com/sgreben/k8s-training/master/ex3_Dockerfile
+curl -Lo deployment.yaml https://raw.githubusercontent.com/sgreben/k8s-training/master/ex3_deployment.yaml
+curl -Lo service.yaml https://raw.githubusercontent.com/sgreben/k8s-training/master/ex3_service.yaml
