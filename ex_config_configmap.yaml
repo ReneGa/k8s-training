@@ -4,10 +4,12 @@ metadata:
   name: nginx-auth-config
 data:
   nginx.conf: |
-    location / {
-      auth_basic           off;
-      auth_basic_user_file /secret/htpasswd;
-    }
     http {
+      server {
+        location / {
+          auth_basic           off;
+          auth_basic_user_file /secret/htpasswd;
+        }
+      }        
       include /etc/nginx/conf.d/*.conf;
     }
