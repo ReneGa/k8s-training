@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-auth-config
+data:
+  nginx.conf: |
+    location / {
+      auth_basic           "basic auth protected";
+      auth_basic_user_file conf/htpasswd;
+    }
