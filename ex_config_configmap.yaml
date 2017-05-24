@@ -5,6 +5,6 @@ metadata:
 data:
   nginx.conf: |
     location / {
-      auth_basic           "basic auth protected";
+      auth_basic           off;
       auth_basic_user_file conf/htpasswd;
     }
