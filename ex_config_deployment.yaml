@@ -18,12 +18,7 @@ spec:
         volumeMounts:
         - name: htpasswd-secret
           mountPath: /secret/
-        - name: config-volume
-          mountPath: /etc/nginx/
       volumes:
       - name: htpasswd-secret
         secret:
           secretName: web-server-htpasswd
-      - name: config-volume
-        configMap:
-          name: nginx-auth-config
