@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: <DEPLOYMENT NAME>
+spec:
+    replicas: <REPLICA COUNT>
+    template:
+        metadata:
+            labels:
+                <LABEL>
+        spec:
+            containers:
+            - name: <CONTAINER NAME>
+              image: <IMAGE NAME>
+              imagePullPolicy: Never
+              ports:
+              - containerPort: <PORT>
