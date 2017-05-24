@@ -26,4 +26,4 @@ spec:
                 secretName: web-server-htpasswd
             - name: config-volume
               configMap:
-                name: special-config
+                name: nginx-auth-config
