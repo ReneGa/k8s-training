@@ -17,7 +17,7 @@ spec:
               - containerPort: 30080
               volumeMounts:
               - name: htpasswd-secret
-                mountPath: "/secret"
+                mountPath: /secret
                 readOnly: true
             volumes:
             - name: htpasswd-secret
