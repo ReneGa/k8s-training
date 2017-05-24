@@ -17,9 +17,9 @@ spec:
         - containerPort: 30080
         volumeMounts:
         - name: htpasswd-secret
-        mountPath: /secret/
+          mountPath: /secret/
         - name: config-volume
-        mountPath: /etc/nginx/
+          mountPath: /etc/nginx/
       volumes:
       - name: htpasswd-secret
         secret:
