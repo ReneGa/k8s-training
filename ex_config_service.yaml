@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: <SERVICE NAME>
+    name: web-server
 spec:
-    type: <SERVICE TYPE>
+    type: NodePort
     selector:
-        <LABEL>
+        app: web
     ports:
     - protocol: TCP
-      port: <PORT>
-      nodePort: <NODE PORT>
+      port: 80
+      nodePort: 30080
