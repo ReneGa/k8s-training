@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: <CONTAINER NAME>
-        image: <CONTAINER IMAGE>
+        image: <IMAGE>
         ports:
         - containerPort: <CONTAINER PORT>
