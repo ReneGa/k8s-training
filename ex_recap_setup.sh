@@ -1,2 +1,2 @@
-rm *.yaml
+rm *
 touch Dockerfile index.html
