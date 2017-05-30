@@ -1,5 +1,4 @@
 #!/bin/sh
-rm *.yaml
 launch.sh
 curl -Lo Dockerfile https://raw.githubusercontent.com/sgreben/k8s-training/master/ex_config_Dockerfile
 curl -Lo deployment.yaml https://raw.githubusercontent.com/sgreben/k8s-training/master/ex_config_deployment.yaml
